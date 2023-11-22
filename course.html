@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/0308e04451.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+        <title>Jawahar Navodaya Vidyalaya satara</title>
+</head>
+
+<body>
+
+    <!----Header---->
+    <section class="course-header">
+        <nav>
+           
+
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="course-text-box">
+            <h1>Our Courses</h1>
+        </div>
+    </section>
+
+    <!----Course---->
+    <section class="course">
+        <h1>Facilities  We Offer</h1>
+        <p>Jawahar Navodaya Vidyalayas (JNVs) are a system of government-funded schools in India that provide quality education to students from rural areas, with a focus on promoting national integration and providing opportunities to talented children.</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Hostels</h3>
+                <p>JNVs are fully residential schools, and students live on the campus.
+The residential nature of JNVs helps students develop a strong sense of discipline and responsibility.</p>
+            </div>
+            <div class="course-col">
+                <h3>CBSE Education</h3>
+                <p>JNVs are known for their commitment to quality education. They follow the Central Board of Secondary Education (CBSE) curriculum.
+Students are provided with a conducive study environment, with well-equipped classrooms and libraries.</p>
+            </div>
+            <div class="course-col">
+                <h3>Sport and Art</h3>
+                <p>JNVs emphasize the overall development of students, including their physical and extracurricular activities.
+Sports like cricket, football, basketball, volleyball, athletics, and other games are encouraged, and many JNVs have sports facilities.</p>
+            </div>
+        </div>
+    </section>
+       <div class="icons">
+            <a href="www.linkedin.com/in/vishwas-nalawade-106672229">
+                       <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            
+            
+           
+        </div>
+
+   
+
+    <!---Javascript for toggole menu--->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+</body>
+
+</html>

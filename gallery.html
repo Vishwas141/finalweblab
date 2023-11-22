@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+            body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: calc(33.33% - 20px); /* Adjust width based on your design */
+    height: 200px; /* Set a fixed height for the gallery item */
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Maintain the aspect ratio and cover the container */
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.2);
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity based on your design */
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<div style="margin-top: 20px; margin-bottom: 20px; text-align: center;">
+    <h1 style="font-size: 36px; background: linear-gradient(45deg, #FFD700, #FF4500); -webkit-background-clip: text; color: transparent;">
+        Gallery
+    </h1>
+</div>
+
+<div class="gallery-container" id="gallery-container">
+    <!-- Images will be dynamically added here -->
+</div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
