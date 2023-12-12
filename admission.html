@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admission Form</title>
+  <title>Student Registartion Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,7 +13,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
- 
       margin-top: 30px;
     }
 
@@ -69,10 +68,12 @@
       background-color: #45a049;
     }
   </style>
+  <!-- Add Axios from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-  <form>
-    <h2>Admission Form</h2>
+  <form id="admissionForm">
+    <h2>Student Form</h2>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -94,7 +95,24 @@
     <label for="course">Course:</label>
     <input type="text" id="course" name="course" required>
 
-    <button type="submit">Submit</button>
+    <button type="button" onclick="submitForm()">Submit</button>
   </form>
+
+  <script>
+    function submitForm() {
+      const form = document.getElementById('admissionForm');
+      const formData = new FormData(form);
+
+      axios.post('http://localhost:3000/api/students', Object.fromEntries(formData))
+        .then(response => {
+          console.log(response.data);
+          alert('Form submitted successfully!');
+        })
+        .catch(error => {
+          console.error(error);
+          alert('Error submitting form. Please try again.');
+        });
+    }
+  </script>
 </body>
 </html>

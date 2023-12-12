@@ -1,6 +1,27 @@
 {
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "mongodb": "^6.3.0"
-  }
+    "mongodb": "^6.3.0",
+    "nodemon": "^3.0.2"
+  },
+  "name": "webtechassignment-master",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishwas141/WTechassignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vishwas141/WTechassignment/issues"
+  },
+  "homepage": "https://github.com/Vishwas141/WTechassignment#readme",
+  "description": ""
 }
